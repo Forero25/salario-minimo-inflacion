@@ -1,0 +1,24 @@
+name: explorar-fuentes
+on: { workflow_dispatch: {}, push: { paths: ['.github/workflows/explorar.yml'] } }
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enlaces de descarga en páginas del DANE y BanRep
+        run: |
+          UA="Mozilla/5.0 (X11; Linux x86_64) portafolio-datos-publicos"
+          for u in \
+            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc" \
+            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica" \
+            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-historico" \
+            "https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" \
+            "https://www.banrep.gov.co/es/estadisticas/salarios" \
+            "https://www.banrep.gov.co/es/estadisticas/salario-minimo-legal-colombia" \
+            "https://www.banrep.gov.co/es/minutas" \
+            "https://www.banrep.gov.co/es/politica-monetaria/comunicados" \
+            "https://www.banrep.gov.co/es/publicaciones-investigaciones/informe-politica-monetaria" ; do
+            echo "=== $u"
+            curl -sL -A "$UA" --max-time 60 "$u" -o p.html -w "HTTP %{http_code} %{size_download}\n"
+            grep -oiE 'href="[^"]+\.(xlsx|xls|zip|csv|pdf)[^"]*"' p.html | sort -u | head -80
+            grep -oiE 'href="[^"]*(minuta|comunicado|acta)[^"]*"' p.html | sort -u | head -40
+          done
