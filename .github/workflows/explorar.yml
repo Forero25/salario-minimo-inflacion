@@ -1,24 +1,38 @@
 name: explorar-fuentes
 on: { workflow_dispatch: {}, push: { paths: ['.github/workflows/explorar.yml'] } }
+permissions: { contents: write }
 jobs:
   explorar:
     runs-on: ubuntu-latest
     steps:
-      - name: Enlaces de descarga en páginas del DANE y BanRep
+      - name: Bajar anexos del DANE
         run: |
-          UA="Mozilla/5.0 (X11; Linux x86_64) portafolio-datos-publicos"
-          for u in \
-            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc" \
-            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica" \
-            "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-historico" \
-            "https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" \
-            "https://www.banrep.gov.co/es/estadisticas/salarios" \
-            "https://www.banrep.gov.co/es/estadisticas/salario-minimo-legal-colombia" \
-            "https://www.banrep.gov.co/es/minutas" \
-            "https://www.banrep.gov.co/es/politica-monetaria/comunicados" \
-            "https://www.banrep.gov.co/es/publicaciones-investigaciones/informe-politica-monetaria" ; do
-            echo "=== $u"
-            curl -sL -A "$UA" --max-time 60 "$u" -o p.html -w "HTTP %{http_code} %{size_download}\n"
-            grep -oiE 'href="[^"]+\.(xlsx|xls|zip|csv|pdf)[^"]*"' p.html | sort -u | head -80
-            grep -oiE 'href="[^"]*(minuta|comunicado|acta)[^"]*"' p.html | sort -u | head -40
+          set +e
+          mkdir -p x && cd x
+          D=https://www.dane.gov.co/files
+          for f in operaciones/IPC/oct2026/anex-IPC-subclases-ingresos-total-oct2026.xlsx operaciones/IPC/oct2026/anex-IPC-Indices-oct2026.xlsx \
+                   operaciones/IPC/oct2026/anex-IPC-CiudadesMensuales-oct2026.xlsx operaciones/IPC/oct2026/anex-IPC-divisiones-ingresos-total-oct2026.xlsx \
+                   investigaciones/boletines/ipc/Ej-reconstruccion-2009-2018-nomenclatura-COICOP-y-var-anuales.xlsx \
+                   operaciones/IPC/Estructura-historica-ponderaciones-y-canasta-IPC-2026.xls investigaciones/boletines/ipc/anexo_ipc_dic16.xls; do
+            curl -sSL -A "Mozilla/5.0" --max-time 120 -O "$D/$f"; echo "$f rc=$?"
           done
+          ls -la
+      - name: Diagnóstico BanRep
+        run: |
+          set +e
+          curl -sv -A "Mozilla/5.0" --max-time 30 https://www.banrep.gov.co/es/minutas -o /dev/null 2>&1 | grep -iE "SSL|certif|issuer|HTTP/" | head -20
+          echo | openssl s_client -connect www.banrep.gov.co:443 -servername www.banrep.gov.co -showcerts 2>/dev/null | grep -E "s:|i:" | head
+          curl -sL -A "Mozilla/5.0" --max-time 60 https://www.banrep.gov.co/es/minutas -o m.html --cacert /etc/ssl/certs/ca-certificates.crt; echo rc=$?
+          python3 - <<'PY'
+          import urllib.request, ssl, re
+          for u in ["https://www.banrep.gov.co/es/minutas","https://www.banrep.gov.co/es/comunicados-junta"]:
+              try:
+                  h=urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"}),timeout=60).read().decode("utf-8","ignore")
+                  print(u, len(h)); print("\n".join(sorted(set(re.findall(r'href="([^"]+)"',h)))[:200]))
+              except Exception as e: print(u,"ERR",e)
+          PY
+      - name: Publicar en release
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release create exploracion --repo ${{ github.repository }} --title exploracion --notes "archivos de exploración" 2>/dev/null || true
+          gh release upload exploracion x/* --clobber --repo ${{ github.repository }}
