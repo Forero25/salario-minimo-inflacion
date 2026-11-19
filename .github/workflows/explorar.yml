@@ -5,34 +5,23 @@ jobs:
   explorar:
     runs-on: ubuntu-latest
     steps:
-      - name: Bajar anexos del DANE
+      - name: Patrones de URL de anexos históricos
         run: |
           set +e
-          mkdir -p x && cd x
           D=https://www.dane.gov.co/files
-          for f in operaciones/IPC/oct2026/anex-IPC-subclases-ingresos-total-oct2026.xlsx operaciones/IPC/oct2026/anex-IPC-Indices-oct2026.xlsx \
-                   operaciones/IPC/oct2026/anex-IPC-CiudadesMensuales-oct2026.xlsx operaciones/IPC/oct2026/anex-IPC-divisiones-ingresos-total-oct2026.xlsx \
-                   investigaciones/boletines/ipc/Ej-reconstruccion-2009-2018-nomenclatura-COICOP-y-var-anuales.xlsx \
-                   operaciones/IPC/Estructura-historica-ponderaciones-y-canasta-IPC-2026.xls investigaciones/boletines/ipc/anexo_ipc_dic16.xls; do
-            curl -sSL -A "Mozilla/5.0" --max-time 120 -O "$D/$f"; echo "$f rc=$?"
-          done
-          ls -la
-      - name: Diagnóstico BanRep
+          for y in 19 20 21 22 23 24 25; do for m in dic; do
+            for p in "operaciones/IPC/${m}20${y}/anex-IPC-subclases-ingresos-total-${m}20${y}.xlsx" "investigaciones/boletines/ipc/anex-IPC-subclases-${m}20${y}.xlsx" "investigaciones/boletines/ipc/anex-IPC-subclases-ingresos-total-${m}20${y}.xlsx" "operaciones/IPC/${m}20${y}/anex-IPC-subclases-${m}20${y}.xlsx"; do
+              echo "$p $(curl -s -o /dev/null -w '%{http_code} %{size_download} %{content_type}' -A Mozilla/5.0 $D/$p)"
+            done; done; done
+      - name: Página histórica, enlaces de subclases
+        run: |
+          curl -sL -A Mozilla/5.0 "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-historico" | grep -oiE 'href="[^"]+"' | grep -iE "subclase|ingresos|clases|grupos|Indices|Ponderac" | sort -u | head -120
+      - name: Banco de la República (archivos y repositorio)
         run: |
           set +e
-          curl -sv -A "Mozilla/5.0" --max-time 30 https://www.banrep.gov.co/es/minutas -o /dev/null 2>&1 | grep -iE "SSL|certif|issuer|HTTP/" | head -20
-          echo | openssl s_client -connect www.banrep.gov.co:443 -servername www.banrep.gov.co -showcerts 2>/dev/null | grep -E "s:|i:" | head
-          curl -sL -A "Mozilla/5.0" --max-time 60 https://www.banrep.gov.co/es/minutas -o m.html --cacert /etc/ssl/certs/ca-certificates.crt; echo rc=$?
-          python3 - <<'PY'
-          import urllib.request, ssl, re
-          for u in ["https://www.banrep.gov.co/es/minutas","https://www.banrep.gov.co/es/comunicados-junta"]:
-              try:
-                  h=urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"}),timeout=60).read().decode("utf-8","ignore")
-                  print(u, len(h)); print("\n".join(sorted(set(re.findall(r'href="([^"]+)"',h)))[:200]))
-              except Exception as e: print(u,"ERR",e)
-          PY
-      - name: Publicar en release
-        env: { GH_TOKEN: "${{ github.token }}" }
+          for u in https://www.banrep.gov.co/sites/default/files/paginas/minutas.pdf https://repositorio.banrep.gov.co/ https://repositorio.banrep.gov.co/server/api/core/sites https://www.banrep.gov.co/es/node/1 https://totoro.banrep.gov.co/estadisticas-economicas/ https://suameca.banrep.gov.co/ ; do
+            echo "$u $(curl -s -o r.html -w '%{http_code} %{size_download} %{content_type}' -A Mozilla/5.0 --max-time 40 $u) $(grep -c shieldsquare r.html)"
+          done
+      - name: FRED sin llave
         run: |
-          gh release create exploracion --repo ${{ github.repository }} --title exploracion --notes "archivos de exploración" 2>/dev/null || true
-          gh release upload exploracion x/* --clobber --repo ${{ github.repository }}
+          for s in COLCPIALLMINMEI CHLCPIALLMINMEI PERCPIALLMINMEI MEXCPIALLMINMEI BRACPIALLMINMEI; do echo "$s $(curl -s -o f.csv -w '%{http_code} %{size_download}' "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$s") $(tail -1 f.csv)"; done
