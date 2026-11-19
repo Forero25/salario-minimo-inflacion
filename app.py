@@ -17,7 +17,7 @@ from shinywidgets import output_widget, render_plotly
 AQUI = Path(__file__).parent
 R = {f.stem: json.load(open(f, encoding="utf-8")) for f in (AQUI / "resultados").glob("*.json")}
 CM = pd.read_csv(AQUI / "publicado" / "ciudades_mensual.csv")
-CX, CI, PR, SI = R["contexto"], R["ciudades"], R["productos"], R["sintetico"]
+CX, CI, PR, SI, TX = R["contexto"], R["ciudades"], R["productos"], R["sintetico"], R["texto"]
 AZUL, ROSA, MENTA, AMBAR, LAVANDA, TINTA, GRIS = "#4F6BD8", "#EBA3B0", "#8CCFB8", "#F5B482", "#B9A7E8", "#1F2430", "#C9CED6"
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 
@@ -117,6 +117,17 @@ app_ui = ui.page_navbar(
             tarjeta("Colombia y su sintético", output_widget("g_sint")),
             tarjeta("Placebos: desviación después / ajuste antes", output_widget("g_plac"))),
     ),
+    ui.nav_panel("Texto",
+        ui.p({"class": "lead mt-3"}, "Cada mes el DANE explica la inflación en un boletín técnico y nombra las subclases que más aportaron. Extraje esos "
+             "párrafos de los " + str(TX["boletines"]) + " boletines desde 2019 y medí qué parte del relato se llevan los servicios cuyo costo principal es el trabajo."),
+        ui.layout_columns(
+            ui.value_box("Menciones extraídas y validadas", f"{TX['validacion']['coinciden']} de {TX['validacion']['con_dato']}",
+                         "la variación escrita coincide con la calculada con los índices"),
+            ui.value_box("Servicios intensivos en trabajo, enero a abril", pct(TX["ene_abr"]["2026"]), f"de las subclases nombradas en 2026; {pct(TX['ene_abr']['2019_2025'])} en 2019-2025"),
+            ui.value_box("Veces que el boletín menciona el salario mínimo", str(TX["menciones_salario_minimo"]), "el DANE describe, no atribuye causas"),
+            fill=False),
+        tarjeta("Proporción de servicios intensivos en trabajo entre las subclases que el DANE nombra como mayores aportes", output_widget("g_texto")),
+    ),
     ui.nav_panel("Explorar",
         ui.layout_sidebar(
             ui.sidebar(ui.input_selectize("ciu", "Ciudades", sorted(CM.ciudad.unique()), selected=["Bogotá D.C.", "Cúcuta", "Armenia"], multiple=True),
@@ -136,6 +147,8 @@ de 0,04 puntos de índice en 94 meses.
 permutación de las exposiciones.
 
 **Control sintético.** Pesos no negativos que suman 1 sobre la inflación anual de otros países para imitar a Colombia en 2023-2025; placebos con cada país.
+
+**Texto.** De cada boletín técnico mensual del IPC se extrae el párrafo del mes con las subclases que más aportaron (expresiones regulares) y cada nombre se asocia con su código (TF-IDF de n-gramas de caracteres, similitud coseno). La variación escrita en el texto coincide con la calculada con los índices en 919 de 920 menciones.
 
 **Lo que no hace.** No mide el efecto del mínimo sobre el nivel general de precios de todo el país (los efectos de año lo absorben); la identificación
 descansa casi toda en 2026; la exposición es de 2025 y por ciudad, no por empresa.
@@ -216,6 +229,15 @@ def server(input, output, session):
         fig = go.Figure(go.Bar(x=p.razon, y=p.nombre, orientation="h", marker_color=[ROSA if c == "CO" else GRIS for c in p.pais]))
         fig.update_xaxes(title="Desviación en 2026 / error de ajuste antes")
         return figura(fig, 560)
+
+    @render_plotly
+    def g_texto():
+        a = pd.DataFrame(TX["ene_abr_por_anio"]); b = pd.DataFrame(TX["resto_del_anio"])
+        fig = go.Figure()
+        fig.add_bar(x=a.anio, y=a.pct_trabajo, name="Enero a abril", marker_color=AZUL)
+        fig.add_bar(x=b.anio, y=b.pct_trabajo, name="Mayo a diciembre", marker_color=GRIS)
+        fig.update_yaxes(tickformat=".0%"); fig.update_layout(barmode="group")
+        return figura(fig)
 
     @render_plotly
     def g_explorar():

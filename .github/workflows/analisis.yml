@@ -14,6 +14,9 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
+      - name: Traer los boletines del IPC (release "boletines")
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: mkdir -p data/raw/boletines && gh release download boletines --repo ${{ github.repository }} -D data/raw/boletines
       - run: docker build -t salario-inflacion .
       - name: Correr el pipeline en el contenedor
         run: |

@@ -39,3 +39,14 @@ def test_resultados_coherentes():
     assert c["placebo_t3"]["p"] > 0.05  # el placebo no debe mostrar efecto
     s = json.loads((RES / "sintetico.json").read_text())
     assert abs(sum(p["peso"] for p in s["pesos"]) - 1) < 0.05
+
+
+def test_extraccion_del_parrafo_del_mes():
+    from analisis.texto import extraer
+    t = ("En enero de 2026 en comparación con diciembre de 2025, la variación de las subclases que más aportaron al índice total fueron: "
+         "comidas en establecimientos de servicio a la mesa y autoservicio (3,36%), transporte urbano (incluye tren y metro) (5,11%) "
+         "y servicio doméstico (5,16%). Las subclases con mayores aportes negativos fueron: electricidad (-0,91%). "
+         "En lo corrido del año, en comparación con diciembre de 2024, la variación de las subclases que más aportaron al índice total fueron: arriendo (9,99%). Fin.")
+    r = extraer(t, 2026, 1)
+    assert [n for n, _ in r] == ["comidas en establecimientos de servicio a la mesa y autoservicio", "transporte urbano (incluye tren y metro)", "servicio doméstico"]
+    assert [v for _, v in r] == [3.36, 5.11, 5.16]

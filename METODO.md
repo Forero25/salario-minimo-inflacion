@@ -52,7 +52,16 @@ Pesos no negativos que suman 1 sobre la inflación anual de 22 países para repr
 La brecha después de 2026 se compara con la de placebos: el mismo ejercicio tratando a cada país como el tratado; se ordena por la razón
 entre el error después y el error antes.
 
-## 7. Reproducibilidad
+## 7. Análisis de texto de los boletines del IPC
+
+Corpus: los boletines técnicos mensuales del DANE desde enero de 2019 (94 PDF, descargados con pausas para no saturar el servidor).
+Cada boletín repite tres veces el párrafo de las subclases que más aportaron (mes, año corrido, doce meses); se toma el que compara con
+el mes anterior. Los nombres se extraen con expresiones regulares y se asocian con su código con TF-IDF de n-gramas de caracteres
+(3 a 5) y similitud coseno, contra el nombre completo y contra su comienzo, porque el DANE abrevia los nombres largos.
+**Validación:** la variación escrita en el texto coincide (±0,015) con la calculada con los índices en 919 de 920 menciones.
+Medida: proporción de las subclases nombradas que son servicios cuyo costo principal es el trabajo (lista en `analisis/texto.py`).
+
+## 8. Reproducibilidad
 
 Python descarga y ordena, dbt modela en DuckDB con 18 pruebas, Python analiza con 3 pruebas (una verifica con datos simulados que el diseño
 por ciudades recupera un efecto conocido y no inventa uno). Todo en Docker, en GitHub Actions cada mes. Resultados deterministas.

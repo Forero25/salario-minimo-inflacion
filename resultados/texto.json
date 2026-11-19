@@ -1,0 +1,1024 @@
+{
+ "boletines": 94,
+ "con_parrafo": 92,
+ "menciones_extraidas": 920,
+ "validacion": {
+  "coinciden": 919,
+  "con_dato": 920,
+  "tasa": 0.9989,
+  "similitud_min": 0.2584,
+  "similitud_mediana": 1.0
+ },
+ "menciones_salario_minimo": 0,
+ "por_mes": [
+  {
+   "anio": 2019,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2019,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2019,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2019,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2019,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2019,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2019,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2019,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2019,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2019,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2019,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2020,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2020,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2020,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2020,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2020,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2020,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2020,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2021,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2021,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2021,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2021,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2021,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2021,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2022,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2022,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2022,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2022,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2022,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2022,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2023,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2023,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2023,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2023,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2023,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2023,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2023,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2024,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2024,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2024,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2024,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2024,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 0,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.0
+  },
+  {
+   "anio": 2024,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2025,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2025,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 4,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.4
+  },
+  {
+   "anio": 2025,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2025,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2025,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2025,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2025,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2025,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2025,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2025,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2025,
+   "mes": 11,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2025,
+   "mes": 12,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2026,
+   "mes": 1,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2026,
+   "mes": 2,
+   "nombradas": 10,
+   "trabajo": 5,
+   "primeras3_trabajo": 2,
+   "pct_trabajo": 0.5
+  },
+  {
+   "anio": 2026,
+   "mes": 3,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2026,
+   "mes": 4,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2026,
+   "mes": 5,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2026,
+   "mes": 6,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2026,
+   "mes": 7,
+   "nombradas": 10,
+   "trabajo": 3,
+   "primeras3_trabajo": 1,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2026,
+   "mes": 8,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  },
+  {
+   "anio": 2026,
+   "mes": 9,
+   "nombradas": 10,
+   "trabajo": 2,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2026,
+   "mes": 10,
+   "nombradas": 10,
+   "trabajo": 1,
+   "primeras3_trabajo": 0,
+   "pct_trabajo": 0.1
+  }
+ ],
+ "ene_abr": {
+  "2026": 0.275,
+  "2019_2025": 0.2148
+ },
+ "ene_abr_por_anio": [
+  {
+   "anio": 2019,
+   "pct_trabajo": 0.1667
+  },
+  {
+   "anio": 2020,
+   "pct_trabajo": 0.15
+  },
+  {
+   "anio": 2021,
+   "pct_trabajo": 0.175
+  },
+  {
+   "anio": 2022,
+   "pct_trabajo": 0.15
+  },
+  {
+   "anio": 2023,
+   "pct_trabajo": 0.275
+  },
+  {
+   "anio": 2024,
+   "pct_trabajo": 0.3
+  },
+  {
+   "anio": 2025,
+   "pct_trabajo": 0.275
+  },
+  {
+   "anio": 2026,
+   "pct_trabajo": 0.275
+  }
+ ],
+ "resto_del_anio": [
+  {
+   "anio": 2019,
+   "pct_trabajo": 0.125
+  },
+  {
+   "anio": 2020,
+   "pct_trabajo": 0.075
+  },
+  {
+   "anio": 2021,
+   "pct_trabajo": 0.15
+  },
+  {
+   "anio": 2022,
+   "pct_trabajo": 0.175
+  },
+  {
+   "anio": 2023,
+   "pct_trabajo": 0.2
+  },
+  {
+   "anio": 2024,
+   "pct_trabajo": 0.2143
+  },
+  {
+   "anio": 2025,
+   "pct_trabajo": 0.1875
+  },
+  {
+   "anio": 2026,
+   "pct_trabajo": 0.1833
+  }
+ ],
+ "eneros": {
+  "2019": [
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Transporte urbano  (incluye tren y metro)",
+   "Servicios de comunicación fija y movil y provisión a internet",
+   "Materiales Para La Conservación Y La Reparación De La Vivienda",
+   "Cebolla",
+   "Frutas frescas (II)",
+   "Arriendo efectivo",
+   "Tomate",
+   "Papas",
+   "Hortalizas y legumbres frescas (II)"
+  ],
+  "2020": [
+   "Transporte urbano  (incluye tren y metro)",
+   "Arroz",
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Arriendo imputado",
+   "Arriendo efectivo",
+   "Hortalizas y legumbres frescas (II)",
+   "Tomate",
+   "Servicios de comunicación fija y movil y provisión a internet",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "Artículos Para Higiene Corporal"
+  ],
+  "2021": [
+   "Tomate",
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Transporte urbano  (incluye tren y metro)",
+   "Combustibles para vehículos",
+   "Arriendo imputado",
+   "Carne De Aves",
+   "Carne De Res Y Derivados",
+   "Papas",
+   "Cebolla",
+   "Hortalizas y legumbres frescas (II)"
+  ],
+  "2022": [
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Transporte urbano  (incluye tren y metro)",
+   "Papas",
+   "Productos De Limpieza Y Mantenimiento",
+   "Carne De Res Y Derivados",
+   "Electricidad",
+   "Prendas De Vestir Para Hombre",
+   "Plátanos",
+   "Frutas frescas (II)",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio"
+  ],
+  "2023": [
+   "Transporte urbano  (incluye tren y metro)",
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Combustibles para vehículos",
+   "Vehículo Particular Nuevo O Usado",
+   "Arriendo imputado",
+   "Plátanos",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "Leche",
+   "Productos De Limpieza Y Mantenimiento",
+   "Papas"
+  ],
+  "2024": [
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Combustibles para vehículos",
+   "Transporte urbano  (incluye tren y metro)",
+   "Arriendo imputado",
+   "Electricidad",
+   "Arriendo efectivo",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "Frutas frescas (II)",
+   "Hortalizas y legumbres frescas (II)",
+   "Servicio Doméstico"
+  ],
+  "2025": [
+   "Transporte urbano  (incluye tren y metro)",
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Arriendo imputado",
+   "Tomate",
+   "Arriendo efectivo",
+   "Carne De Aves",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "Hortalizas y legumbres frescas (II)",
+   "Servicio Doméstico",
+   "Electricidad"
+  ],
+  "2026": [
+   "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "Transporte urbano  (incluye tren y metro)",
+   "Carne De Res Y Derivados",
+   "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "Arriendo imputado",
+   "Servicio Doméstico",
+   "Arriendo efectivo",
+   "Tomate",
+   "Papas",
+   "Frutas frescas (II)"
+  ]
+ },
+ "frecuentes": [
+  {
+   "codigo": "11110100",
+   "subclase": "Comidas En Establecimientos De Servicio A La Mesa Y Autoservicio,  Medios De Transporte, Maquinas Expendedoras, Puestos Moviles, Y Lugares De Esparcimiento; Se Incluyen Tambien Las  Contratadas Por Encargo, Para Llevar Y Por Servicio A Domicilio",
+   "trabajo": true,
+   "meses": 79
+  },
+  {
+   "codigo": "04230100",
+   "subclase": "Arriendo imputado",
+   "trabajo": false,
+   "meses": 78
+  },
+  {
+   "codigo": "04130100",
+   "subclase": "Arriendo efectivo",
+   "trabajo": false,
+   "meses": 67
+  },
+  {
+   "codigo": "04510100",
+   "subclase": "Electricidad",
+   "trabajo": false,
+   "meses": 54
+  },
+  {
+   "codigo": "01160900",
+   "subclase": "Frutas frescas (II)",
+   "trabajo": false,
+   "meses": 47
+  },
+  {
+   "codigo": "01120100",
+   "subclase": "Carne De Res Y Derivados",
+   "trabajo": false,
+   "meses": 39
+  },
+  {
+   "codigo": "11110400",
+   "subclase": "Comidas Preparadas Fuera Del Hogar Para Consumo Inmediato, En Establecimientos De Servicio A La Mesa Y Autoservicio,  Puestos Moviles, Lugares De Esparcimiento, Para Llevar Y Por Servicio A Domicilio",
+   "trabajo": true,
+   "meses": 37
+  },
+  {
+   "codigo": "01170500",
+   "subclase": "Papas",
+   "trabajo": false,
+   "meses": 34
+  },
+  {
+   "codigo": "07110100",
+   "subclase": "Vehículo Particular Nuevo O Usado",
+   "trabajo": false,
+   "meses": 33
+  },
+  {
+   "codigo": "04410100",
+   "subclase": "Suministro De Agua",
+   "trabajo": false,
+   "meses": 29
+  },
+  {
+   "codigo": "07220500",
+   "subclase": "Combustibles para vehículos",
+   "trabajo": false,
+   "meses": 28
+  },
+  {
+   "codigo": "07371000",
+   "subclase": "Transporte urbano  (incluye tren y metro)",
+   "trabajo": false,
+   "meses": 28
+  },
+  {
+   "codigo": "01171300",
+   "subclase": "Tomate",
+   "trabajo": false,
+   "meses": 27
+  },
+  {
+   "codigo": "04520300",
+   "subclase": "Gas",
+   "trabajo": false,
+   "meses": 24
+  },
+  {
+   "codigo": "01170400",
+   "subclase": "Plátanos",
+   "trabajo": false,
+   "meses": 23
+  }
+ ],
+ "no_coinciden": [
+  {
+   "anio": 2019,
+   "mes": 1,
+   "nombre_texto": "gasto en servicios de la vivienda ocupada por sus propietarios",
+   "subclase": "Materiales Para La Conservación Y La Reparación De La Vivienda",
+   "var_texto": 0.27,
+   "var_mensual": 0.13,
+   "similitud": 0.2584
+  }
+ ]
+}

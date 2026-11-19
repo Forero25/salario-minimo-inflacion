@@ -1,7 +1,7 @@
 """Corre todos los análisis y escribe resultados/*.json y publicado/*.csv."""
 from __future__ import annotations
 
-from . import ciudades, contexto, productos, sintetico
+from . import ciudades, contexto, productos, sintetico, texto
 from .datos import RAIZ, guardar, leer
 
 
@@ -14,7 +14,7 @@ def publicar() -> None:
 
 
 def main() -> None:
-    for nombre, mod in [("contexto", contexto), ("ciudades", ciudades), ("productos", productos), ("sintetico", sintetico)]:
+    for nombre, mod in [("contexto", contexto), ("ciudades", ciudades), ("productos", productos), ("sintetico", sintetico), ("texto", texto)]:
         guardar(nombre, mod.correr()); print(nombre)
     publicar(); print("publicado")
 
