@@ -1,0 +1,14 @@
+name: crudos
+on: { workflow_dispatch: {}, push: { paths: ['ingesta/descargar.py', '.github/workflows/crudos.yml'] }, schedule: [ { cron: "41 13 12 * *" } ] }
+permissions: { contents: write }
+jobs:
+  crudos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 ingesta/descargar.py
+      - name: Publicar en el release crudos
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release create crudos --repo ${{ github.repository }} --title crudos --notes "Datos públicos descargados por ingesta/descargar.py" 2>/dev/null || true
+          gh release upload crudos data/raw/* --clobber --repo ${{ github.repository }}
