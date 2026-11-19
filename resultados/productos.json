@@ -1,0 +1,149 @@
+{
+ "todas": {
+  "beta": -0.0824,
+  "ee": 0.3035,
+  "p": 0.786,
+  "ic_bajo": -0.6772,
+  "ic_alto": 0.5124,
+  "subclases": 187,
+  "n": 1496
+ },
+ "sin_pesos": {
+  "beta": 0.1675,
+  "ee": 0.4111,
+  "p": 0.6837,
+  "ic_bajo": -0.6383,
+  "ic_alto": 0.9733,
+  "subclases": 187,
+  "n": 1496
+ },
+ "nucleo": {
+  "beta": -0.3566,
+  "ee": 0.2519,
+  "p": 0.1568,
+  "ic_bajo": -0.8502,
+  "ic_alto": 0.1371,
+  "subclases": 105,
+  "n": 840
+ },
+ "hasta_15": {
+  "beta": -0.0408,
+  "ee": 0.1937,
+  "p": 0.8333,
+  "ic_bajo": -0.4204,
+  "ic_alto": 0.3389,
+  "subclases": 187,
+  "n": 1496
+ },
+ "placebo_t3": {
+  "beta": -0.1557,
+  "ee": 0.2993,
+  "p": 0.6029,
+  "ic_bajo": -0.7424,
+  "ic_alto": 0.431,
+  "subclases": 187,
+  "n": 1496
+ },
+ "servicios": [
+  {
+   "codigo": "04440100",
+   "nombre": "Administración de la vivienda",
+   "t1_2025": 3.5144,
+   "t1_2026": 5.5189,
+   "previo": 4.2443
+  },
+  {
+   "codigo": "05620100",
+   "nombre": "Servicio doméstico",
+   "t1_2025": 5.1867,
+   "t1_2026": 10.5154,
+   "previo": 5.5593
+  },
+  {
+   "codigo": "07371000",
+   "nombre": "Transporte urbano",
+   "t1_2025": 8.2964,
+   "t1_2026": 9.8896,
+   "previo": 8.2684
+  },
+  {
+   "codigo": "10110400",
+   "nombre": "Educación preescolar y básica primaria",
+   "t1_2025": 6.5223,
+   "t1_2026": 6.0686,
+   "previo": 7.9822
+  },
+  {
+   "codigo": "11110100",
+   "nombre": "Comidas en establecimientos de servicio a la mesa",
+   "t1_2025": 3.6992,
+   "t1_2026": 5.5663,
+   "previo": 4.7567
+  },
+  {
+   "codigo": "12110100",
+   "nombre": "Peluquería y salones de belleza",
+   "t1_2025": 3.6459,
+   "t1_2026": 4.7148,
+   "previo": 3.6917
+  }
+ ],
+ "indexados": [
+  {
+   "codigo": "07240100",
+   "subclase": "Parqueaderos",
+   "t1_2025": 4.0055,
+   "t1_2026": 5.2118,
+   "previo": 3.7676
+  },
+  {
+   "codigo": "07240200",
+   "subclase": "Peajes",
+   "t1_2025": 7.6411,
+   "t1_2026": 6.1851,
+   "previo": 8.2716
+  },
+  {
+   "codigo": "07240300",
+   "subclase": "Gastos Reglamentarios Relacionados Con La Propiedad, Manejo Y Alquiler De Vehículos",
+   "t1_2025": 5.3934,
+   "t1_2026": 8.1546,
+   "previo": 8.9216
+  },
+  {
+   "codigo": "12410100",
+   "subclase": "Servicios de protección social dentro y fuera del hogar",
+   "t1_2025": 2.7606,
+   "t1_2026": 8.5877,
+   "previo": 2.6706
+  },
+  {
+   "codigo": "12410200",
+   "subclase": "Guarderías, salacunas, cuidado de niños fuera del hogar y servicios de adopción",
+   "t1_2025": 6.2166,
+   "t1_2026": 7.6869,
+   "previo": 7.3578
+  },
+  {
+   "codigo": "12410300",
+   "subclase": "Cuotas moderadoras a EPS",
+   "t1_2025": 5.1302,
+   "t1_2026": 5.3401,
+   "previo": 9.0135
+  },
+  {
+   "codigo": "12710500",
+   "subclase": "Certificados, documentos administrativos y pago de honorarios",
+   "t1_2025": 5.165,
+   "t1_2026": 5.0676,
+   "previo": 9.19
+  },
+  {
+   "codigo": "12719900",
+   "subclase": "Otros pagos por servicios",
+   "t1_2025": 3.8586,
+   "t1_2026": 7.0038,
+   "previo": 5.3872
+  }
+ ]
+}

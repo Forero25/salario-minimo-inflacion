@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+RAW = Path(__file__).resolve().parents[1] / "data" / "raw"  # en Docker: /app/data/raw
 UA = {"User-Agent": "Mozilla/5.0 (portafolio de datos públicos; github.com/Forero25/salario-minimo-inflacion)"}
 DANE = "https://www.dane.gov.co/files"
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]

@@ -1,0 +1,15 @@
+name: salario_inflacion
+version: "1.0.0"
+config-version: 2
+profile: salario_inflacion
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+vars:
+  interim: "{{ env_var('SM_INTERIM', '../data/interim') }}"
+  entradas: "{{ env_var('SM_ENTRADAS', '../entradas') }}"
+  k_encogimiento: 100   # pseudo-observaciones hacia la media nacional para sectores con muestra pequeña
+models:
+  salario_inflacion:
+    staging: { +materialized: table, +schema: staging }
+    marts: { +materialized: table, +schema: marts }

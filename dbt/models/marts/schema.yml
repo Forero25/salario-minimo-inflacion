@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: panel_subclases
+    data_tests:
+      - combinacion_unica: { arguments: { columnas: [codigo, anio] } }
+    columns:
+      - name: en_minimo
+        data_tests: [not_null, { entre: { arguments: { minimo: 0, maximo: 1 } } }]
+      - name: var_t1
+        data_tests: [{ entre: { arguments: { minimo: -60, maximo: 100 } } }]
+  - name: panel_ciudades
+    data_tests:
+      - combinacion_unica: { arguments: { columnas: [ciudad, anio] } }
+  - name: validacion_laspeyres
+    columns:
+      - name: diferencia
+        data_tests: [{ entre: { arguments: { minimo: -0.1, maximo: 0.1 } } }]

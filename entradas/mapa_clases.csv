@@ -1,0 +1,85 @@
+clase,ciiu,tipo,marca,nota
+0111,10,bien,,cereales y derivados: industria de alimentos
+0112,10,bien,,carnes: industria de alimentos
+0113,03,bien,,pescado: pesca
+0114,10,bien,,lácteos y huevos: industria de alimentos
+0115,10,bien,,aceites y grasas
+0116,01,bien,,frutas: agricultura
+0117,01,bien,,"legumbres, hortalizas, tubérculos: agricultura"
+0118,10,bien,,"azúcar, panela y dulces"
+0119,10,bien,,otros alimentos procesados
+0121,10,bien,,"café, chocolate, té"
+0122,11,bien,,bebidas no alcohólicas
+0211,11,bien,,licores
+0212,11,bien,,vinos
+0213,11,bien,,cerveza
+0221,12,bien,,tabaco
+0312,14,bien,,prendas de vestir
+0313,14,bien,,accesorios de vestir
+0314,96,servicio,,lavado y planchado
+0321,15,bien,,calzado
+0413,68,servicio,,arriendo efectivo: actividades inmobiliarias
+0423,68,servicio,imputado,arriendo imputado (no es una transacción: se excluye)
+0431,23,bien,,materiales para la vivienda
+0441,36,servicio,regulado,acueducto
+0442,38,servicio,regulado,aseo y basuras
+0443,37,servicio,regulado,alcantarillado
+0444,81,servicio,,administración de la vivienda (vigilancia y aseo de edificios)
+0451,35,servicio,regulado,electricidad
+0452,35,servicio,regulado,gas
+0511,31,bien,,muebles
+0521,13,bien,,textiles del hogar
+0531,27,bien,,electrodomésticos grandes
+0532,27,bien,,electrodomésticos pequeños
+0541,23,bien,,cristalería y vajilla
+0552,27,bien,,accesorios eléctricos
+0561,20,bien,,productos de limpieza y aseo
+0562,97,servicio,,servicio doméstico
+0611,21,bien,,medicamentos
+0612,32,bien,,implementos médicos
+0613,32,bien,,equipo terapéutico
+0621,86,servicio,,consulta médica
+0622,86,servicio,,odontología
+0623,86,servicio,,laboratorio y servicios auxiliares
+0631,86,servicio,,servicios médicos menores
+0711,29,bien,,vehículos
+0712,30,bien,,motos
+0713,30,bien,,bicicletas
+0721,22,bien,,llantas y repuestos
+0722,19,bien,regulado,combustibles
+0723,45,servicio,,mantenimiento de vehículos
+0724,52,servicio,indexado,"parqueaderos, peajes y gastos reglamentarios"
+0733,51,servicio,,transporte aéreo
+0737,49,servicio,regulado,transporte urbano e intermunicipal
+0821,26,bien,,celulares
+0831,61,servicio,,comunicaciones
+0911,26,bien,,equipos de audio y video
+0913,26,bien,,computadores
+0931,32,bien,,juguetes
+0933,01,bien,,plantas y flores
+0934,10,bien,,alimento para mascotas
+0935,75,servicio,,veterinaria
+0941,93,servicio,,servicios recreativos
+0942,59,servicio,,cine y televisión por suscripción
+0951,58,bien,,libros
+0952,58,bien,,periódicos
+0953,18,bien,,impresos
+0954,17,bien,,papelería
+0961,79,servicio,,paquetes turísticos
+1011,85,servicio,,educación preescolar y básica
+1021,85,servicio,,educación secundaria
+1041,85,servicio,,educación superior
+1051,85,servicio,,educación no formal
+1111,56,servicio,,comidas y bebidas fuera del hogar
+1112,56,servicio,,alimentación en comedores
+1121,55,servicio,,alojamiento
+1211,96,servicio,,peluquería y salones de belleza
+1212,27,bien,,aparatos eléctricos de cuidado personal
+1213,20,bien,,artículos de cuidado personal
+1231,32,bien,,joyería y relojes
+1232,15,bien,,artículos de viaje y personales
+1241,88,servicio,indexado,"protección social, guarderías y cuotas moderadoras"
+1253,65,servicio,,seguros médicos y de accidentes
+1254,65,servicio,,seguros de vehículos
+1262,66,servicio,,servicios financieros
+1271,84,servicio,indexado,certificados y documentos

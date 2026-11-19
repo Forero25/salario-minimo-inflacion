@@ -1,0 +1,28 @@
+name: analisis
+on:
+  schedule:
+    - cron: "13 14 12 * *"   # el 12 de cada mes, después de que el DANE publica el IPC del mes anterior
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["ingesta/**", "dbt/**", "analisis/**", "tests/**", "entradas/**", "Dockerfile", "correr.sh", "requirements-pipeline.txt"]
+permissions: { contents: write }
+concurrency: { group: analisis, cancel-in-progress: false }
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - run: docker build -t salario-inflacion .
+      - name: Correr el pipeline en el contenedor
+        run: |
+          mkdir -p data
+          docker run --rm -v "$PWD/data:/app/data" -v "$PWD/resultados:/app/resultados" -v "$PWD/publicado:/app/publicado" salario-inflacion
+      - name: Guardar resultados
+        run: |
+          git config user.name "Jose Nicolas Forero"; git config user.email "175185823+Forero25@users.noreply.github.com"
+          git add resultados publicado
+          git diff --cached --quiet && exit 0
+          git commit -m "Resultados $(date -u +%F)"
+          git pull --rebase -X theirs origin main && git push

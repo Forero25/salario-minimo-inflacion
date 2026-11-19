@@ -1,0 +1,519 @@
+{
+ "pesos": [
+  {
+   "pais": "Nueva Zelanda",
+   "peso": 0.5976
+  },
+  {
+   "pais": "Hungría",
+   "peso": 0.2173
+  },
+  {
+   "pais": "Noruega",
+   "peso": 0.07
+  },
+  {
+   "pais": "Turquía",
+   "peso": 0.0642
+  },
+  {
+   "pais": "Suecia",
+   "peso": 0.051
+  }
+ ],
+ "serie": [
+  {
+   "real": 13.2527,
+   "sintetico": 14.3559,
+   "brecha": -1.1032,
+   "anio": 2023,
+   "mes": 1
+  },
+  {
+   "real": 13.2829,
+   "sintetico": 14.0764,
+   "brecha": -0.7935,
+   "anio": 2023,
+   "mes": 2
+  },
+  {
+   "real": 13.3436,
+   "sintetico": 13.6887,
+   "brecha": -0.3451,
+   "anio": 2023,
+   "mes": 3
+  },
+  {
+   "real": 12.8218,
+   "sintetico": 12.5971,
+   "brecha": 0.2247,
+   "anio": 2023,
+   "mes": 4
+  },
+  {
+   "real": 12.3633,
+   "sintetico": 11.7713,
+   "brecha": 0.592,
+   "anio": 2023,
+   "mes": 5
+  },
+  {
+   "real": 12.1281,
+   "sintetico": 11.3404,
+   "brecha": 0.7877,
+   "anio": 2023,
+   "mes": 6
+  },
+  {
+   "real": 11.7883,
+   "sintetico": 11.1214,
+   "brecha": 0.6669,
+   "anio": 2023,
+   "mes": 7
+  },
+  {
+   "real": 11.4321,
+   "sintetico": 11.4369,
+   "brecha": -0.0048,
+   "anio": 2023,
+   "mes": 8
+  },
+  {
+   "real": 10.9924,
+   "sintetico": 10.5413,
+   "brecha": 0.4511,
+   "anio": 2023,
+   "mes": 9
+  },
+  {
+   "real": 10.4769,
+   "sintetico": 9.4771,
+   "brecha": 0.9998,
+   "anio": 2023,
+   "mes": 10
+  },
+  {
+   "real": 10.1478,
+   "sintetico": 9.0977,
+   "brecha": 1.0501,
+   "anio": 2023,
+   "mes": 11
+  },
+  {
+   "real": 9.2725,
+   "sintetico": 8.6909,
+   "brecha": 0.5816,
+   "anio": 2023,
+   "mes": 12
+  },
+  {
+   "real": 8.3481,
+   "sintetico": 8.0,
+   "brecha": 0.3481,
+   "anio": 2024,
+   "mes": 1
+  },
+  {
+   "real": 7.7377,
+   "sintetico": 8.0536,
+   "brecha": -0.3159,
+   "anio": 2024,
+   "mes": 2
+  },
+  {
+   "real": 7.3662,
+   "sintetico": 8.0678,
+   "brecha": -0.7016,
+   "anio": 2024,
+   "mes": 3
+  },
+  {
+   "real": 7.1666,
+   "sintetico": 7.7183,
+   "brecha": -0.5517,
+   "anio": 2024,
+   "mes": 4
+  },
+  {
+   "real": 7.1569,
+   "sintetico": 8.095,
+   "brecha": -0.9381,
+   "anio": 2024,
+   "mes": 5
+  },
+  {
+   "real": 7.1797,
+   "sintetico": 7.6938,
+   "brecha": -0.5141,
+   "anio": 2024,
+   "mes": 6
+  },
+  {
+   "real": 6.86,
+   "sintetico": 6.4816,
+   "brecha": 0.3784,
+   "anio": 2024,
+   "mes": 7
+  },
+  {
+   "real": 6.1181,
+   "sintetico": 5.6484,
+   "brecha": 0.4697,
+   "anio": 2024,
+   "mes": 8
+  },
+  {
+   "real": 5.8124,
+   "sintetico": 5.3859,
+   "brecha": 0.4265,
+   "anio": 2024,
+   "mes": 9
+  },
+  {
+   "real": 5.407,
+   "sintetico": 5.396,
+   "brecha": 0.011,
+   "anio": 2024,
+   "mes": 10
+  },
+  {
+   "real": 5.2009,
+   "sintetico": 5.4015,
+   "brecha": -0.2006,
+   "anio": 2024,
+   "mes": 11
+  },
+  {
+   "real": 5.2031,
+   "sintetico": 5.3722,
+   "brecha": -0.1691,
+   "anio": 2024,
+   "mes": 12
+  },
+  {
+   "real": 5.223,
+   "sintetico": 5.6146,
+   "brecha": -0.3916,
+   "anio": 2025,
+   "mes": 1
+  },
+  {
+   "real": 5.2753,
+   "sintetico": 5.5394,
+   "brecha": -0.2641,
+   "anio": 2025,
+   "mes": 2
+  },
+  {
+   "real": 5.0865,
+   "sintetico": 5.1791,
+   "brecha": -0.0926,
+   "anio": 2025,
+   "mes": 3
+  },
+  {
+   "real": 5.159,
+   "sintetico": 5.1159,
+   "brecha": 0.0431,
+   "anio": 2025,
+   "mes": 4
+  },
+  {
+   "real": 5.0521,
+   "sintetico": 5.055,
+   "brecha": -0.0029,
+   "anio": 2025,
+   "mes": 5
+  },
+  {
+   "real": 4.8201,
+   "sintetico": 5.0931,
+   "brecha": -0.273,
+   "anio": 2025,
+   "mes": 6
+  },
+  {
+   "real": 4.9005,
+   "sintetico": 5.163,
+   "brecha": -0.2625,
+   "anio": 2025,
+   "mes": 7
+  },
+  {
+   "real": 5.0956,
+   "sintetico": 5.1619,
+   "brecha": -0.0663,
+   "anio": 2025,
+   "mes": 8
+  },
+  {
+   "real": 5.1767,
+   "sintetico": 5.1957,
+   "brecha": -0.019,
+   "anio": 2025,
+   "mes": 9
+  },
+  {
+   "real": 5.5122,
+   "sintetico": 5.1537,
+   "brecha": 0.3585,
+   "anio": 2025,
+   "mes": 10
+  },
+  {
+   "real": 5.3011,
+   "sintetico": 4.891,
+   "brecha": 0.4101,
+   "anio": 2025,
+   "mes": 11
+  },
+  {
+   "real": 5.0999,
+   "sintetico": 4.7945,
+   "brecha": 0.3054,
+   "anio": 2025,
+   "mes": 12
+  },
+  {
+   "real": 5.3536,
+   "sintetico": 4.5254,
+   "brecha": 0.8282,
+   "anio": 2026,
+   "mes": 1
+  },
+  {
+   "real": 5.29,
+   "sintetico": 4.3855,
+   "brecha": 0.9045,
+   "anio": 2026,
+   "mes": 2
+  },
+  {
+   "real": 5.5589,
+   "sintetico": 4.5019,
+   "brecha": 1.057,
+   "anio": 2026,
+   "mes": 3
+  },
+  {
+   "real": 5.6813,
+   "sintetico": 5.1807,
+   "brecha": 0.5006,
+   "anio": 2026,
+   "mes": 4
+  },
+  {
+   "real": 5.8421,
+   "sintetico": 5.1672,
+   "brecha": 0.6749,
+   "anio": 2026,
+   "mes": 5
+  },
+  {
+   "real": 6.1437,
+   "sintetico": 5.0718,
+   "brecha": 1.0719,
+   "anio": 2026,
+   "mes": 6
+  },
+  {
+   "real": 6.0263,
+   "sintetico": 4.7242,
+   "brecha": 1.3021,
+   "anio": 2026,
+   "mes": 7
+  },
+  {
+   "real": 6.2417,
+   "sintetico": 4.768,
+   "brecha": 1.4737,
+   "anio": 2026,
+   "mes": 8
+  },
+  {
+   "real": 6.2898,
+   "sintetico": 4.761,
+   "brecha": 1.5288,
+   "anio": 2026,
+   "mes": 9
+  }
+ ],
+ "rmspe_pre": 0.5171,
+ "rmspe_post": 1.0894,
+ "brecha_media_post": 1.038,
+ "brecha_ultimo": 1.5288,
+ "ultimo": {
+  "anio": 2026,
+  "mes": 9
+ },
+ "puesto": 7,
+ "paises": 23,
+ "p_placebo": 0.3043,
+ "placebos": [
+  {
+   "pais": "PE",
+   "nombre": "Perú",
+   "razon": 8.1556,
+   "brecha_media_post": 2.116,
+   "rmspe_pre": 0.2796
+  },
+  {
+   "pais": "PH",
+   "nombre": "Filipinas",
+   "razon": 7.0888,
+   "brecha_media_post": 2.6832,
+   "rmspe_pre": 0.4126
+  },
+  {
+   "pais": "JP",
+   "nombre": "Japón",
+   "razon": 2.9841,
+   "brecha_media_post": -1.353,
+   "rmspe_pre": 0.4636
+  },
+  {
+   "pais": "SE",
+   "nombre": "Suecia",
+   "razon": 2.6358,
+   "brecha_media_post": -2.8216,
+   "rmspe_pre": 1.1123
+  },
+  {
+   "pais": "RO",
+   "nombre": "Rumania",
+   "razon": 2.6033,
+   "brecha_media_post": 4.4871,
+   "rmspe_pre": 1.8354
+  },
+  {
+   "pais": "BR",
+   "nombre": "Brasil",
+   "razon": 2.1275,
+   "brecha_media_post": 1.4942,
+   "rmspe_pre": 0.7078
+  },
+  {
+   "pais": "CO",
+   "nombre": "Colombia",
+   "razon": 2.1069,
+   "brecha_media_post": 1.038,
+   "rmspe_pre": 0.5171
+  },
+  {
+   "pais": "ID",
+   "nombre": "Indonesia",
+   "razon": 2.056,
+   "brecha_media_post": 0.7599,
+   "rmspe_pre": 0.5292
+  },
+  {
+   "pais": "ZA",
+   "nombre": "Sudáfrica",
+   "razon": 1.9054,
+   "brecha_media_post": 0.2955,
+   "rmspe_pre": 0.3329
+  },
+  {
+   "pais": "GB",
+   "nombre": "Reino Unido",
+   "razon": 1.8895,
+   "brecha_media_post": -0.7165,
+   "rmspe_pre": 0.4815
+  },
+  {
+   "pais": "MX",
+   "nombre": "México",
+   "razon": 1.8827,
+   "brecha_media_post": 0.0709,
+   "rmspe_pre": 0.3419
+  },
+  {
+   "pais": "MY",
+   "nombre": "Malasia",
+   "razon": 1.791,
+   "brecha_media_post": -0.3655,
+   "rmspe_pre": 0.3112
+  },
+  {
+   "pais": "NZ",
+   "nombre": "Nueva Zelanda",
+   "razon": 1.5562,
+   "brecha_media_post": 0.3813,
+   "rmspe_pre": 0.323
+  },
+  {
+   "pais": "CL",
+   "nombre": "Chile",
+   "razon": 1.5024,
+   "brecha_media_post": -0.2843,
+   "rmspe_pre": 0.4707
+  },
+  {
+   "pais": "CA",
+   "nombre": "Canadá",
+   "razon": 1.3437,
+   "brecha_media_post": -0.1192,
+   "rmspe_pre": 0.2334
+  },
+  {
+   "pais": "IN",
+   "nombre": "India",
+   "razon": 0.9944,
+   "brecha_media_post": 0.959,
+   "rmspe_pre": 1.1165
+  },
+  {
+   "pais": "NO",
+   "nombre": "Noruega",
+   "razon": 0.9118,
+   "brecha_media_post": -0.0791,
+   "rmspe_pre": 0.4888
+  },
+  {
+   "pais": "TH",
+   "nombre": "Tailandia",
+   "razon": 0.872,
+   "brecha_media_post": -0.2969,
+   "rmspe_pre": 1.6263
+  },
+  {
+   "pais": "KR",
+   "nombre": "Corea del Sur",
+   "razon": 0.7555,
+   "brecha_media_post": 0.063,
+   "rmspe_pre": 0.326
+  },
+  {
+   "pais": "HU",
+   "nombre": "Hungría",
+   "razon": 0.702,
+   "brecha_media_post": -2.3796,
+   "rmspe_pre": 3.518
+  },
+  {
+   "pais": "TR",
+   "nombre": "Turquía",
+   "razon": 0.6142,
+   "brecha_media_post": 26.7189,
+   "rmspe_pre": 43.5253
+  },
+  {
+   "pais": "PL",
+   "nombre": "Polonia",
+   "razon": 0.5952,
+   "brecha_media_post": 0.2819,
+   "rmspe_pre": 0.8451
+  },
+  {
+   "pais": "CZ",
+   "nombre": "Chequia",
+   "razon": 0.256,
+   "brecha_media_post": -0.0111,
+   "rmspe_pre": 0.9783
+  }
+ ],
+ "ajuste_desde_2021": {
+  "brecha_media_post": 1.865,
+  "rmspe_pre": 0.8805
+ }
+}

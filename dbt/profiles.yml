@@ -1,0 +1,7 @@
+salario_inflacion:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('SM_DB', '../data/salario.duckdb') }}"
+      threads: 4
