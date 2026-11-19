@@ -19,6 +19,7 @@ PAGINAS = ["/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-
 
 
 def bajar(url: str) -> bytes | None:
+    time.sleep(2)  # sin afán: el servidor del DANE corta si se le piden muchos archivos seguidos
     for i in range(2):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
@@ -28,7 +29,7 @@ def bajar(url: str) -> bytes | None:
             if e.code == 404:
                 return None
         except Exception:
-            time.sleep(3)
+            time.sleep(20)
     return None
 
 
