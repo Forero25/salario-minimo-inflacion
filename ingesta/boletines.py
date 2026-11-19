@@ -55,6 +55,9 @@ def main() -> None:
     RAW.mkdir(parents=True, exist_ok=True)
     links = enlazados()
     print("enlazados:", len(links))
+    for l in links:
+        if re.search(r"(20|21|22|23|24)\.pdf|202[0-4]\.pdf", l):
+            print("link", l)
     t = time.gmtime()
     faltan = []
     for anio in range(2019, t.tm_year + 1):
