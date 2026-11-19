@@ -5,23 +5,22 @@ jobs:
   explorar:
     runs-on: ubuntu-latest
     steps:
-      - name: Patrones de URL de anexos históricos
+      - name: Wayback CDX de anexos de subclases
         run: |
           set +e
-          D=https://www.dane.gov.co/files
-          for y in 19 20 21 22 23 24 25; do for m in dic; do
-            for p in "operaciones/IPC/${m}20${y}/anex-IPC-subclases-ingresos-total-${m}20${y}.xlsx" "investigaciones/boletines/ipc/anex-IPC-subclases-${m}20${y}.xlsx" "investigaciones/boletines/ipc/anex-IPC-subclases-ingresos-total-${m}20${y}.xlsx" "operaciones/IPC/${m}20${y}/anex-IPC-subclases-${m}20${y}.xlsx"; do
-              echo "$p $(curl -s -o /dev/null -w '%{http_code} %{size_download} %{content_type}' -A Mozilla/5.0 $D/$p)"
-            done; done; done
-      - name: Página histórica, enlaces de subclases
-        run: |
-          curl -sL -A Mozilla/5.0 "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-historico" | grep -oiE 'href="[^"]+"' | grep -iE "subclase|ingresos|clases|grupos|Indices|Ponderac" | sort -u | head -120
-      - name: Banco de la República (archivos y repositorio)
-        run: |
-          set +e
-          for u in https://www.banrep.gov.co/sites/default/files/paginas/minutas.pdf https://repositorio.banrep.gov.co/ https://repositorio.banrep.gov.co/server/api/core/sites https://www.banrep.gov.co/es/node/1 https://totoro.banrep.gov.co/estadisticas-economicas/ https://suameca.banrep.gov.co/ ; do
-            echo "$u $(curl -s -o r.html -w '%{http_code} %{size_download} %{content_type}' -A Mozilla/5.0 --max-time 40 $u) $(grep -c shieldsquare r.html)"
+          for pre in "dane.gov.co/files/investigaciones/boletines/ipc/" "dane.gov.co/files/operaciones/IPC/" "dane.gov.co/files/investigaciones/ipc/"; do
+            curl -s --max-time 120 "https://web.archive.org/cdx/search/cdx?url=${pre}&matchType=prefix&fl=original&collapse=urlkey&limit=20000" | grep -iE "subclase" | sort -u | head -100
           done
-      - name: FRED sin llave
+      - name: BIS precios al consumidor
         run: |
-          for s in COLCPIALLMINMEI CHLCPIALLMINMEI PERCPIALLMINMEI MEXCPIALLMINMEI BRACPIALLMINMEI; do echo "$s $(curl -s -o f.csv -w '%{http_code} %{size_download}' "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$s") $(tail -1 f.csv)"; done
+          set +e
+          for c in CO CL PE MX BR; do echo "$c $(curl -s -o b.csv -w '%{http_code} %{size_download}' --max-time 60 "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_LONG_CPI/1.0/M.${c}.771?format=csv")"; head -2 b.csv; tail -1 b.csv; done
+      - name: Repositorio BanRep (DSpace)
+        run: |
+          set +e
+          curl -s --max-time 60 "https://repositorio.banrep.gov.co/server/api/discover/search/objects?query=minutas%20junta%20directiva&size=20" -H "Accept: application/json" | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin); o=d['_embedded']['searchResult']
+          print('total',o['page']['totalElements'])
+          for x in o['_embedded']['objects']: i=x['_embedded']['indexableObject']; print(i.get('name'), i.get('handle'))" || echo fallo
+          curl -s --max-time 60 "https://repositorio.banrep.gov.co/server/api/discover/search/objects?query=comunicado%20tasa%20de%20interes&size=10" -H "Accept: application/json" | head -c 600
