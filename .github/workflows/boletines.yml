@@ -1,0 +1,17 @@
+name: boletines
+on: { workflow_dispatch: {}, push: { paths: ['ingesta/boletines.py', '.github/workflows/boletines.yml'] }, schedule: [ { cron: "53 13 12 * *" } ] }
+permissions: { contents: write }
+jobs:
+  boletines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Traer los ya descargados
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: mkdir -p data/raw/boletines && gh release download boletines --repo ${{ github.repository }} -D data/raw/boletines 2>/dev/null || true
+      - run: python3 ingesta/boletines.py
+      - name: Publicar en el release boletines
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release create boletines --repo ${{ github.repository }} --title boletines --notes "Boletines técnicos del IPC (DANE)" 2>/dev/null || true
+          gh release upload boletines data/raw/boletines/*.pdf --clobber --repo ${{ github.repository }}
